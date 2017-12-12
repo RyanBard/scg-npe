@@ -10,7 +10,7 @@ spring:
         - id: test_route_id
           uri: /abc/**
           predicates:
-            - Path=/def/**
+            - Path=/abc/def/**
             - Method=GET
           filters:
             - AddResponseHeader=X-Response-Blah, Blargh

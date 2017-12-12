@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - AddResponseHeader=X-Response-Foo, Bar
+      routes:
+        - id: test_route_id
+          uri: /abc/**
+          predicates:
+            - Path=/def/**
+            - Method=GET
+          filters:
+            - AddResponseHeader=X-Response-Blah, Blargh

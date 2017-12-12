@@ -1,7 +1,5 @@
 # NullPointerException in spring-cloud-gateway
 
-Note that reproducing this seems to require that the uri and the predicate Path in the [application.yml](src/main/resources/application.yml) don't match.  I'm not sure if this is an invalid config, because I haven't got an example working enough to know whether the full uri feeds into the Path filter or not.  After analyzing the code in a debugger, I'm not sure how this isn't a problem for other situations (where the uri and predicate Path don't mismatch).
-
 ## Curl to reproduce the error
 
 ```
